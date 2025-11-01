@@ -1,8 +1,7 @@
 const express = require("express");
-
 const app = express();
-const PORT = 3000;
 
+// Middleware para parsear JSON
 app.use(express.json());
 
 // Ruta para recibir peticiones desde Kapso
@@ -11,9 +10,9 @@ app.post("/webhook", (req, res) => {
   res.status(200).json({ message: "Webhook recibido correctamente" });
 });
 
-// Iniciar servidor
+// Puerto dinámico para Render
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en puerto ${PORT}`);
+  console.log(`🚀 Servidor escuchando en el puerto ${PORT}`);
 });
