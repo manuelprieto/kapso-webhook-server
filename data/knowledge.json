@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "level": "secundaria",
+    "topic": "admisiones",
+    "content_type": "pdf",
+    "title": "Admisiones Bachillerato",
+    "description": "Información sobre el proceso de admisión para bachillerato",
+    "source_url": "https://kapso-server.onrender.com/files/admisiones_bachillerato.pdf",
+    "keywords": ["admisiones", "bachillerato"],
+    "last_updated": "2024-06-07"
+  }
+]
