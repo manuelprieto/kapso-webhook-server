@@ -1,5 +1,14 @@
 const fs = require('fs');
-const pdf = require('pdf-parse').default; // Importación corregida
+let pdf;
+// Maneja ambas formas, según si 'default' existe o no (para compatibilidad)
+try {
+  pdf = require('pdf-parse');
+  if (typeof pdf !== 'function' && pdf.default) {
+    pdf = pdf.default;
+  }
+} catch (e) {
+  console.log('No se pudo importar pdf-parse correctamente:', e);
+}
 
 module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
   try {
