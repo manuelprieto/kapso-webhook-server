@@ -16,6 +16,24 @@ function searchKB(level, query) {
   const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[áéíóúüñ]/g, x =>
     ({á:'a',é:'e',í:'i',ó:'o',ú:'u',ü:'u',ñ:'n'})[x] || x);
   const q = norm(query || "");
+  const items = KB.filter(x => x.level === level);const express = require("express");
+const path = require("path");
+const fs = require("fs");
+
+const app = express();
+app.use(express.json());
+
+// Servir PDFs de la carpeta /files
+app.use("/files", express.static(path.join(__dirname, "files")));
+
+// Buscar en la base de conocimiento
+function searchKB(level, query) {
+  const kbPath = path.join(__dirname, "data", "knowledge.json");
+  let KB = [];
+  try { KB = JSON.parse(fs.readFileSync(kbPath, "utf8")); } catch (err) { return null; }
+  const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[áéíóúüñ]/g, x =>
+    ({á:'a',é:'e',í:'i',ó:'o',ú:'u',ü:'u',ñ:'n'})[x] || x);
+  const q = norm(query || "");
   const items = KB.filter(x => x.level === level);
   let hit = items.find(x => (x.keywords||[]).some(k => q.includes(norm(k))));
   if (hit) return hit;
