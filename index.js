@@ -37,6 +37,9 @@ app.post("/knowledge/query", async (req, res) => {
   if ((item.content_type || "") === "pdf") {
     const pdfPath = path.join(__dirname, "files", path.basename(item.source_url));
     try {
+      // ---> AQUÍ va el console.log de depuración <---
+      console.log("Buscando en PDF:", pdfPath, "Palabra clave:", query);
+
       const fragmento = await buscarPalabraEnPDF(pdfPath, query);
       if (fragmento) {
         return res.json({
