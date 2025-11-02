@@ -1,13 +1,7 @@
 const fs = require('fs');
-let pdf;
-// Maneja ambas formas, según si 'default' existe o no (para compatibilidad)
-try {
-  pdf = require('pdf-parse');
-  if (typeof pdf !== 'function' && pdf.default) {
-    pdf = pdf.default;
-  }
-} catch (e) {
-  console.log('No se pudo importar pdf-parse correctamente:', e);
+let pdf = require('pdf-parse');
+if (typeof pdf !== 'function' && pdf.default) {
+  pdf = pdf.default;
 }
 
 module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
@@ -29,6 +23,10 @@ module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
     }
 
     const dataBuffer = fs.readFileSync(rutaPDF);
+    if (typeof pdf !== 'function') {
+      console.log('pdf-parse no es una función.');
+      return null;
+    }
     const data = await pdf(dataBuffer);
 
     // Depuración: mostrar parte del texto extraído
