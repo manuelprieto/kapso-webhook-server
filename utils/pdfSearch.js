@@ -1,5 +1,5 @@
 const fs = require('fs');
-const pdf = require('pdf-parse'); // Asegúrate de tener pdf-parse instalado
+const pdf = require('pdf-parse').default; // Importación corregida
 
 module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
   try {
@@ -20,7 +20,6 @@ module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
     }
 
     const dataBuffer = fs.readFileSync(rutaPDF);
-    // pdf-parse debe ser una función, si no, prueba require('pdf-parse').default
     const data = await pdf(dataBuffer);
 
     // Depuración: mostrar parte del texto extraído
@@ -47,5 +46,3 @@ module.exports = async function buscarPalabraEnPDF(rutaPDF, palabraClave) {
     return null;
   }
 };
-
-
