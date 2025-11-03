@@ -1,13 +1,12 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const buscarPalabraEnPDF = require("./utils/pdfSearch"); // Importa tu función utilitaria
 
 const app = express();
 app.use(express.json());
 
-// Servir PDFs de la carpeta /files
-app.use("/files", express.static(path.join(__dirname, "files")));
+// Servir PDFs de la carpeta /files (puedes quitar esta línea si ya no usas PDFs)
+// app.use("/files", express.static(path.join(__dirname, "files")));
 
 // Buscar en la base de conocimiento
 function searchKB(level, query) {
@@ -34,41 +33,7 @@ app.post("/knowledge/query", async (req, res) => {
   const item = searchKB(level, query);
   if (!item) return res.json({ response: `No encontré información para "${query}" en ${level}.`, type: "none" });
 
-  if ((item.content_type || "") === "pdf") {
-    const pdfPath = path.join(__dirname, "files", path.basename(item.source_url));
-    try {
-      // ---> AQUÍ va el console.log de depuración <---
-      console.log("Buscando en PDF:", pdfPath, "Palabra clave:", query);
-
-      const fragmento = await buscarPalabraEnPDF(pdfPath, query);
-      if (fragmento) {
-        return res.json({
-          response: `Esto encontré relacionado con "${query}":\\n${fragmento}`,
-          type: "pdf-fragment",
-          url: item.source_url,
-          context: item.level,
-          topic: item.topic
-        });
-      } else {
-        return res.json({
-          response: `No encontré ese tema exacto, pero aquí tienes el documento completo: ${item.source_url}`,
-          type: "pdf",
-          url: item.source_url,
-          context: item.level,
-          topic: item.topic
-        });
-      }
-    } catch (err) {
-      return res.json({
-        response: `No pude leer el PDF. Aquí tienes el enlace directo: ${item.source_url}`,
-        type: "pdf",
-        url: item.source_url,
-        context: item.level,
-        topic: item.topic
-      });
-    }
-  }
-
+  // Responder solo con texto del JSON
   return res.json({
     response: item.description || item.title,
     type: "text",
