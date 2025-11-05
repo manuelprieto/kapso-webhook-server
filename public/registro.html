@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Admisiones - Liceo Educativo Bogotá</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f1f7fc;
+      color: #303950;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+    }
+    .header {
+      background: #2166b7;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      padding: 1rem 0;
+      margin: -2rem -2rem 2rem -2rem;
+    }
+    label {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #2166b7;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #bdd3f6;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      transition: border 0.2s;
+    }
+    input:focus {
+      border: 1.5px solid #2166b7;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2166b7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #18467a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Liceo Educativo Bogotá</h2>
+      <p>Formulario de Registro de Admisiones</p>
+    </div>
+    <form action="/api/registro" method="POST">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono">
+
+      <button type="submit">Enviar registro</button>
+    </form>
+  </div>
+</body>
+</html>
