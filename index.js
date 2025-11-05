@@ -5,8 +5,8 @@ const fs = require("fs");
 const app = express();
 app.use(express.json());
 
-// Servir PDFs de la carpeta /files (puedes quitar esta línea si ya no usas PDFs)
-// app.use("/files", express.static(path.join(__dirname, "files")));
+// Agrega esta línea para servir archivos estáticos desde la carpeta public
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Buscar en la base de conocimiento
 function searchKB(level, query) {
