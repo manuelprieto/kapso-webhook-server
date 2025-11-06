@@ -17,8 +17,16 @@
     },
     "jornada_horarios": {
       "title": "Jornada y Horarios Bachillerato",
-      "description": "Jornada-Horarios:\n\n-Jornada académica oficial: 6:50am – 2:30pm\n Refuerzo y clubes: 2:40pm – 4:00pm",
+      "description": "Jornada-Horarios:\n\n-Jornada académica oficial: 6:50am - 2:30pm\n Refuerzo y clubes: 2:40pm - 4:00pm",
       "last_updated": "2025/11/25",
       "source_url": "",
       "keywords": ["jornada","horarios"]
+    },
+    "certificados": {
+      "title": "Certificados",
+      "description": "Certificados:\n\n-Diligenciar en el siguiente link:\n-https://kapso-server.onrender.com/certificado.html",
+      "last_updated": "2025/11/25",
+      "certificados_url": "https://kapso-server.onrender.com/certificado.html",
+      "source_url": "",
+      "keywords": ["certificados","bachillerato"]
     }}}
