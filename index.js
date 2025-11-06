@@ -5,7 +5,7 @@ const fs = require("fs");
 const app = express();
 app.use(express.json());
 
-// Agrega esta línea para servir archivos estáticos desde la carpeta public
+// Sirve archivos estáticos desde 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Buscar en la base de conocimiento
@@ -33,7 +33,22 @@ app.post("/knowledge/query", async (req, res) => {
   const item = searchKB(level, query);
   if (!item) return res.json({ response: `No encontré información para "${query}" en ${level}.`, type: "none" });
 
-  // Responder solo con texto del JSON
+  // --- NUEVO BLOQUE: lógica para registro/inscripción ---
+  const registroIntentKeywords = ["registrarme", "registro", "inscribirme", "inscripción"];
+  const lowerQuery = (query || "").toLowerCase();
+  const isRegistroIntent = registroIntentKeywords.some(k => lowerQuery.includes(k));
+  if (isRegistroIntent && item.registration_url) {
+    return res.json({
+      response: `Puedes iniciar el proceso de registro en el siguiente enlace: ${item.registration_url}`,
+      type: "registration",
+      url: item.registration_url,
+      context: item.level,
+      topic: item.topic
+    });
+  }
+  // --- FIN DEL NUEVO BLOQUE ---
+
+  // Responder solo con texto del JSON (como antes)
   return res.json({
     response: item.description || item.title,
     type: "text",
