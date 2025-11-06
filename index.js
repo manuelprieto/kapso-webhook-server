@@ -8,20 +8,30 @@ app.use(express.json());
 // Sirve archivos estáticos desde 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Buscar en la base de conocimiento
+// Carga la base de conocimiento una sola vez en memoria
+const kbPath = path.join(__dirname, "data", "knowledge.json");
+let KB = {};
+try {
+  KB = JSON.parse(fs.readFileSync(kbPath, "utf8"));
+} catch (err) {
+  console.error("Error cargando knowledge.json:", err);
+}
+
+// Buscar en la base de conocimiento eficiente (objeto anidado)
 function searchKB(level, query) {
-  const kbPath = path.join(__dirname, "data", "knowledge.json");
-  let KB = [];
-  try { KB = JSON.parse(fs.readFileSync(kbPath, "utf8")); } catch (err) { return null; }
   const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[áéíóúüñ]/g, x =>
     ({á:'a',é:'e',í:'i',ó:'o',ú:'u',ü:'u',ñ:'n'})[x] || x);
   const q = norm(query || "");
-  const items = KB.filter(x => x.level === level);
-  let hit = items.find(x => (x.keywords||[]).some(k => q.includes(norm(k))));
-  if (hit) return hit;
-  if (/(horario|hora|jornada)/.test(q)) return items.find(x => x.topic === "horarios");
-  if (/(matric|inscrip)/.test(q)) return items.find(x => x.topic === "matriculas");
-  if (/(pago|pension|cuota|mensualidad)/.test(q)) return items.find(x => x.topic === "pagos");
+  if (!KB[level]) return null;
+
+  // Busca coincidencia por keywords y permite consulta por topic directo
+  for (const topicKey of Object.keys(KB[level])) {
+    const item = KB[level][topicKey];
+    if ((item.keywords||[]).some(k => q.includes(norm(k))))
+      return { ...item, topic: topicKey, level };
+    if (norm(topicKey).includes(q) || q.includes(norm(topicKey))) // match por topic
+      return { ...item, topic: topicKey, level };
+  }
   return null;
 }
 
@@ -33,7 +43,7 @@ app.post("/knowledge/query", async (req, res) => {
   const item = searchKB(level, query);
   if (!item) return res.json({ response: `No encontré información para "${query}" en ${level}.`, type: "none" });
 
-  // --- NUEVO BLOQUE: lógica para registro/inscripción ---
+  // Lógica para registro/inscripción
   const registroIntentKeywords = ["registrarme", "registro", "inscribirme", "inscripción"];
   const lowerQuery = (query || "").toLowerCase();
   const isRegistroIntent = registroIntentKeywords.some(k => lowerQuery.includes(k));
@@ -46,9 +56,8 @@ app.post("/knowledge/query", async (req, res) => {
       topic: item.topic
     });
   }
-  // --- FIN DEL NUEVO BLOQUE ---
 
-  // Responder solo con texto del JSON (como antes)
+  // Responder solo con texto del JSON
   return res.json({
     response: item.description || item.title,
     type: "text",
