@@ -1,14 +1,24 @@
-[
-  {
-    "id": "1",
-    "level": "bachillerato",
-    "topic": "admisiones",
-    "content_type": "text",
-    "title": "Admisiones Bachillerato",
-    "description": "Admisiones\n\nRequisitos:\n- Documento de identidad del estudiante y acudiente\n- Certificado de calificaciones últimos 2 años\n- Prueba diagnóstica académica\n- Entrevista familiar\n- Formulario de inscripción\n- Certificado de conducta del colegio anterior\n\nProceso de admisiones:\n1. Registro en la plataforma de admisiones\n2. Envío de documentos\n3. Presentación de prueba diagnóstica\n4. Entrevista con coordinación académica\n5. Confirmación y matrícula",
-    "registration_url": "https://kapso-server.onrender.com/registro.html",
-    "source_url": "",
-    "keywords": ["admisiones", "bachillerato", "registro", "inscribirme", "inscripción"],
-    "last_updated": "2024-06-07"
-  }
-]
+{
+  "bachillerato": {
+    "admisiones": {
+      "title": "Admisiones Bachillerato",
+      "description": "Admisiones\n\nRequisitos:\n- Documento de identidad del estudiante y acudiente\n- Certificado de calificaciones últimos 2 años\n- Prueba diagnóstica académica\n- Entrevista familiar\n- Formulario de inscripción\n- Certificado de conducta del colegio anterior\n\nProceso de admisiones:\n1. Registro en la plataforma de admisiones\n2. Envío de documentos\n3. Presentación de prueba diagnóstica\n4. Entrevista con coordinación académica\n5. Confirmación y matrícula",
+      "registration_url": "https://kapso-server.onrender.com/registro.html",
+      "source_url": "",
+      "keywords": ["admisiones", "bachillerato", "registro", "inscribirme", "inscripción"],
+      "last_updated": "2025-11-25"
+    },
+    "plan_academico": {
+      "title": "Plan Académico Bachillerato",
+      "description": "Plan acedémico\n\nÁreas académicas:\n-Matemáticas avanzadas\n-Lengua castellana\n-Inglés intensivo B1-B2\n-Ciencias naturales y laboratorio\n-Ciencias sociales y ciudadanía\n-Tecnología e informática\n-Competencias digitales\n-Electivas: Robótica, Emprendimiento, Artes, Programación",
+      "last_updated":"2025/11/25",
+      "source_url": "",
+      "keywords": ["bachillerato","Plan académico"]
+    },
+    "jornada_horarios": {
+      "title": "Jornada y Horarios Bachillerato",
+      "description": "Jornada-Horarios:\n\n-Jornada académica oficial: 6:50am – 2:30pm\n Refuerzo y clubes: 2:40pm – 4:00pm",
+      "last_updated": "2025/11/25",
+      "source_url": "",
+      "keywords": ["jornada","horarios"]
+    }}}
