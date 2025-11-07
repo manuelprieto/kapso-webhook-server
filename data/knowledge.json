@@ -62,5 +62,33 @@
       "source_url": "",
       "keywords": ["certificados", "primaria"]
     }
+  },
+  "administracion": {
+    "pagos": {
+      "title": "Pagos",
+      "description": "Medios de pago:\\n- Oficina de tesorería\\n- Transferencia bancaria\\n- Pago en línea (PSE / tarjetas)\\n- Convenios empresariales\\n\\nFechas importantes:\\n- Matrículas: Dic 10 2025 – Ene 15 2026\\n- Pensiones: Primeros 5 días hábiles de cada mes\\n\\nPolítica de pagos:\\n- Descuentos por pago anual anticipado\\n- Recargos por mora después de 5 días\\n- Apoyo financiero bajo evaluación socioeconómica\\n\\nSoporte tesorería:\\npagos@escuelabogota.edu.co\\n601-555-8801",
+      "last_updated": "2025/11/25",
+      "keywords": ["pagos", "tesorería", "medios de pago", "matrículas", "pensiones"]
+    },
+    "certificados": {
+      "title": "Certificados Administrativos",
+      "description": "Certificados disponibles:\\n- Estudio\\n- Notas\\n- Conducta\\n- Paz y salvo financiero\\n\\nProceso:\\n- Solicitud por correo o plataforma institucional\\n- Tiempo de entrega: 2 a 4 días hábiles",
+      "last_updated": "2025/11/25",
+      "keywords": ["certificados", "administracion", "paz y salvo", "notas", "estudio", "conducta"]
+    },
+    "documentos_tramites": {
+      "title": "Documentos o Trámites",
+      "description": "Trámites comunes:\\n- Constancias\\n- Carné estudiantil\\n- Solicitud de cupo\\n- Traslados académicos\\n- Retiro o aplazamiento de matrícula\\n\\nRequisitos y formatos disponibles en plataforma institucional.",
+      "last_updated": "2025/11/25",
+      "keywords": ["trámites", "documentos", "constancias", "traslados", "retiro"]
+    },
+    "otro": {
+      "title": "Otro tema administrativo",
+      "description": "Para otros temas administrativos contáctanos:\\nadministracion@escuelabogota.edu.co\\n601-555-8800\\nHorario de atención: Lun - Vie 8:00am – 4:30pm",
+      "last_updated": "2025/11/25",
+      "keywords": ["administracion", "contacto", "otros temas"]
+    }
   }
 }
+
+
