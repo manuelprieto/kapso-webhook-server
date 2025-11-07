@@ -2,31 +2,65 @@
   "bachillerato": {
     "admisiones": {
       "title": "Admisiones Bachillerato",
-      "description": "Admisiones\n\nRequisitos:\n- Documento de identidad del estudiante y acudiente\n- Certificado de calificaciones últimos 2 años\n- Prueba diagnóstica académica\n- Entrevista familiar\n- Formulario de inscripción\n- Certificado de conducta del colegio anterior\n\nProceso de admisiones:\n1. Registro en la plataforma de admisiones\n2. Envío de documentos\n3. Presentación de prueba diagnóstica\n4. Entrevista con coordinación académica\n5. Confirmación y matrícula",
-      "registration_url": "https://kapso-server.onrender.com/registro.html",
+      "description": "Admisiones\\n\\nRequisitos:\\n- Documento de identidad del estudiante y acudiente\\n- Certificado de calificaciones últimos 2 años\\n- Prueba diagnóstica académica\\n- Entrevista familiar\\n- Formulario de inscripción\\n- Certificado de conducta del colegio anterior\\n\\nProceso de admisiones:\\n1. Registro en la plataforma de admisiones\\n2. Envío de documentos\\n3. Presentación de prueba diagnóstica\\n4. Entrevista con coordinación académica\\n5. Confirmación y matrícula",
+      "registration_url": "<https://kapso-server.onrender.com/registro.html>",
       "source_url": "",
       "keywords": ["admisiones", "bachillerato", "registro", "inscribirme", "inscripción"],
       "last_updated": "2025-11-25"
     },
     "plan_academico": {
       "title": "Plan Académico Bachillerato",
-      "description": "Plan acedémico\n\nÁreas académicas:\n-Matemáticas avanzadas\n-Lengua castellana\n-Inglés intensivo B1-B2\n-Ciencias naturales y laboratorio\n-Ciencias sociales y ciudadanía\n-Tecnología e informática\n-Competencias digitales\n-Electivas: Robótica, Emprendimiento, Artes, Programación",
+      "description": "Plan académico\\n\\nÁreas académicas:\\n-Matemáticas avanzadas\\n-Lengua castellana\\n-Inglés intensivo B1-B2\\n-Ciencias naturales y laboratorio\\n-Ciencias sociales y ciudadanía\\n-Tecnología e informática\\n-Competencias digitales\\n-Electivas: Robótica, Emprendimiento, Artes, Programación",
       "last_updated":"2025/11/25",
       "source_url": "",
       "keywords": ["bachillerato","Plan académico"]
     },
     "jornada_horarios": {
       "title": "Jornada y Horarios Bachillerato",
-      "description": "Jornada-Horarios:\n\n-Jornada académica oficial: 6:50am - 2:30pm\n Refuerzo y clubes: 2:40pm - 4:00pm",
+      "description": "Jornada-Horarios:\\n\\n-Jornada académica oficial: 6:50am - 2:30pm\\n Refuerzo y clubes: 2:40pm - 4:00pm",
       "last_updated": "2025/11/25",
       "source_url": "",
       "keywords": ["jornada","horarios"]
     },
     "certificados": {
-      "title": "Certificados",
-      "description": "Certificados:\n\n-Diligenciar en el siguiente link:\n-https://kapso-server.onrender.com/certificado.html",
+      "title": "Certificados Bachillerato",
+      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://kapso-server.onrender.com/certificado.html>",
       "last_updated": "2025/11/25",
-      "certificados_url": "https://kapso-server.onrender.com/certificado.html",
+      "certificados_url": "<https://kapso-server.onrender.com/certificado.html>",
       "source_url": "",
       "keywords": ["certificados","bachillerato"]
-    }}}
+    }
+  },
+  "primaria": {
+    "admisiones": {
+      "title": "Admisiones Primaria",
+      "description": "Admisiones\\n\\nRequisitos:\\n- Documento de identidad del estudiante y acudiente\\n- Certificado de calificaciones últimos 2 años\\n- Prueba diagnóstica académica\\n- Entrevista familiar\\n- Formulario de inscripción\\n- Certificado de conducta del colegio anterior\\n\\nProceso de admisiones:\\n1. Registro en la plataforma de admisiones\\n2. Envío de documentos\\n3. Presentación de prueba diagnóstica\\n4. Entrevista con coordinación académica\\n5. Confirmación y matrícula",
+      "registration_url": "<https://kapso-server.onrender.com/registro.html>",
+      "source_url": "",
+      "keywords": ["admisiones", "primaria", "registro", "inscribirme", "inscripción"],
+      "last_updated": "2025-11-25"
+    },
+    "plan_academico": {
+      "title": "Plan Académico Primaria",
+      "description": "Plan académico\\n\\nÁreas académicas:\\n-Matemáticas\\n-Lengua castellana\\n-Inglés\\n-Ciencias naturales\\n-Ciencias sociales\\n-Tecnología y informática\\n-Competencias digitales\\n-Artes y música\\n-Educación física",
+      "last_updated": "2025/11/25",
+      "source_url": "",
+      "keywords": ["primaria", "Plan académico"]
+    },
+    "jornada_horarios": {
+      "title": "Jornada y Horarios Primaria",
+      "description": "Jornada-Horarios:\\n\\n-Jornada académica oficial: 7:00am - 2:00pm\\n-Clubes y refuerzo: 2:10pm - 3:30pm",
+      "last_updated": "2025/11/25",
+      "source_url": "",
+      "keywords": ["jornada", "horarios", "primaria"]
+    },
+    "certificados": {
+      "title": "Certificados Primaria",
+      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://kapso-server.onrender.com/certificado.html>",
+      "last_updated": "2025/11/25",
+      "certificados_url": "<https://kapso-server.onrender.com/certificado.html>",
+      "source_url": "",
+      "keywords": ["certificados", "primaria"]
+    }
+  }
+}
