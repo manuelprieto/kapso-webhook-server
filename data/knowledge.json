@@ -3,7 +3,7 @@
     "admisiones": {
       "title": "Admisiones Bachillerato",
       "description": "Admisiones\\n\\nRequisitos:\\n- Documento de identidad del estudiante y acudiente\\n- Certificado de calificaciones últimos 2 años\\n- Prueba diagnóstica académica\\n- Entrevista familiar\\n- Formulario de inscripción\\n- Certificado de conducta del colegio anterior\\n\\nProceso de admisiones:\\n1. Registro en la plataforma de admisiones\\n2. Envío de documentos\\n3. Presentación de prueba diagnóstica\\n4. Entrevista con coordinación académica\\n5. Confirmación y matrícula",
-      "registration_url": "<https://kapso-server.onrender.com/registro.html>",
+      "registration_url": "<https://api.nuviasoft.cloud/registro.html>",
       "source_url": "",
       "keywords": ["admisiones", "bachillerato", "registro", "inscribirme", "inscripción"],
       "last_updated": "2025-11-25"
