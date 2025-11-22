@@ -26,7 +26,7 @@
       "title": "Certificados Bachillerato",
       "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://api.nuviasoft.cloud/certificado.html>",
       "last_updated": "2025/11/25",
-      "certificados_url": "<https://api.nuviasoft.cloud /certificado.html>",
+      "certificados_url": "<https://api.nuviasoft.cloud/certificado.html>",
       "source_url": "",
       "keywords": ["certificados","bachillerato"]
     }
@@ -35,7 +35,7 @@
     "admisiones": {
       "title": "Admisiones Primaria",
       "description": "Admisiones\\n\\nRequisitos:\\n- Documento de identidad del estudiante y acudiente\\n- Edad mínima: 6 años cumplidos a marzo de 2026.\\n- Boletín académico del año anterior\\n- Certificado medico general\\n- Dos fotos tamaño documento\\n- Entrevista familiar\\n- Formulario de inscripción\\n- Certificado de conducta del colegio anterior\\n\\nProceso de admisiones:\\n1. Registro en la plataforma de admisiones\\n2. Envío de documentos\\n3. Presentación de prueba diagnóstica\\n4. Entrevista con coordinación académica\\n5. Confirmación y matrícula",
-      "registration_url": "<https://kapso-server.onrender.com/registro.html>",
+      "registration_url": "<https://api.nuviasoft.cloud/registro.html>",
       "source_url": "",
       "keywords": ["admisiones", "primaria", "registro", "inscribirme", "inscripción"],
       "last_updated": "2025-11-25"
@@ -56,9 +56,9 @@
     },
     "certificados": {
       "title": "Certificados Primaria",
-      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://kapso-server.onrender.com/certificado.html>",
+      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://api.nuviasoft.cloud/certificado.html>",
       "last_updated": "2025/11/25",
-      "certificados_url": "<https://kapso-server.onrender.com/certificado.html>",
+      "certificados_url": "<https://api.nuviasoft.cloud/certificado.html>",
       "source_url": "",
       "keywords": ["certificados", "primaria"]
     }
