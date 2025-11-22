@@ -24,9 +24,9 @@
     },
     "certificados": {
       "title": "Certificados Bachillerato",
-      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://kapso-server.onrender.com/certificado.html>",
+      "description": "Certificados:\\n\\n-Diligenciar en el siguiente link:\\n-<https://api.nuviasoft.cloud/certificado.html>",
       "last_updated": "2025/11/25",
-      "certificados_url": "<https://kapso-server.onrender.com/certificado.html>",
+      "certificados_url": "<https://api.nuviasoft.cloud /certificado.html>",
       "source_url": "",
       "keywords": ["certificados","bachillerato"]
     }
